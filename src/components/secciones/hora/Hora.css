@@ -1,0 +1,86 @@
+/* Variables de color (asumimos que están definidas en el :root o se usan directamente) */
+/* --- Colores de referencia --- */
+/* --azul-marino: #002C6F; */
+/* --plata-brillante: #E0E0E0; */
+/* --oro-acento: #FFC72C; */
+/* --azul-real: #0056B3; */
+
+.hora-container {
+    width: 100%;
+    text-align: center;
+    padding: 40px 20px;
+    border-radius: 20px;
+}
+
+
+/* CARD */
+.hora-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+
+    width: max-content;
+    margin: 0 auto;
+
+    /* Fondo: Plata Brillante (tono claro) */
+    background: #E0E0E0; 
+    padding: 18px 30px;
+
+    border-radius: 15px;
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.08);
+    /* Borde: Azul Marino */
+    border: 2px solid #0056B3; 
+}
+
+.hora-icon {
+    font-size: 1.8rem;
+    color: #0056B3; /* Icono: Dorado */
+}
+
+.hora-text {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #002C6F; /* Texto principal de la hora: Azul Marino */
+}
+
+/* ANIMACIÓN: “LATIDO suave” */
+.anim-hora {
+    animation: palpitar 1.8s ease-in-out infinite;
+}
+
+@keyframes palpitar {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.07);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* TEXTO FINAL */
+.hora-detalle {
+    font-family: 'Beau Rivage', 'Alex Brush', serif;
+    font-size: 2rem;
+    /* Color de fondo del texto: Blanco */
+    color: rgb(255, 255, 255); 
+    /* Sombra del texto: Azul Real */
+    text-shadow: 0 0 4px rgba(53, 84, 255, 0.575); 
+    text-align: center;
+    padding: 0px 20px 0px 20px;
+    margin: 20px auto 5px auto;
+    width: 90%;
+    margin-top: 25px;
+    /* Color del texto fijo (para override): Azul Marino */
+    color: #000000; 
+}
+
+.puntualidad {
+    color: #007bff; /* Destacar "puntualidad" con Azul Real */
+    text-shadow: 0 0 4px rgba(88, 99, 255, 0.788); 
+}

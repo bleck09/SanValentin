@@ -1,0 +1,317 @@
+html,
+body {
+    overflow-x: hidden;
+}
+
+.folderPrincipal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 40px;
+    padding-bottom: 10px;
+}
+
+.folder {
+    max-width: 100%;
+}
+
+
+
+.folder:not(.folder--click):hover {
+    transform: translateY(-8px);
+
+}
+
+.folder:not(.folder--click):hover .paper {
+    transform: translate(-0%, 15%);
+
+}
+
+.folder:not(.folder--click):hover .folder__front {
+    transform: skew(15deg) scaleY(0.6);
+}
+
+.folder:not(.folder--click):hover .right {
+    transform: skew(-15deg) scaleY(0.6);
+
+}
+
+.folder.open {
+    transform: translateY(-8px);
+}
+
+.folder.open .paper:nth-child(1) {
+    transform: translate(-50%, -50%) rotateZ(-15deg);
+    background-image: url('/src/assets/imagenes/principalAdriana3.webp') no-repeat center center;
+    background-size: cover;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.644);
+    width: 90px;
+    height: 60px;
+    border: 5px solid;
+
+}
+
+.folder.open .paper:nth-child(1):hover {
+    transform: translate(-50%, -50%) rotateZ(-18deg) scale(1.1);
+    box-shadow: 0 8px 20px rgba(255, 180, 180, 0.781);
+    z-index: 3;
+}
+
+.folder.open .paper:nth-child(2) {
+    transform: translate(0%, -70%) rotateZ(-4deg);
+    background: url("/src/assets/imagenes/adriFotos5.webp") no-repeat center center;
+    background-size: cover;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.705);
+    width: 100px;
+    height: 70px;
+    border: 5px solid;
+}
+
+.folder.open .paper:nth-child(2):hover {
+    transform: translate(0%, -70%) rotateZ(10deg) scale(1.2);
+
+
+}
+
+.folder.open .paper:nth-child(3) {
+    transform: translate(50%, -50%) rotateZ(5deg);
+    background: url("/src/assets/imagenes/principalAdriana1.webp") no-repeat center center;
+    background-size: cover;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.644);
+    width: 90px;
+    height: 60px;
+    border: 5px solid;
+
+}
+
+.folder.open .paper:nth-child(3):hover {
+    transform: translate(50%, -50%) rotateZ(5deg) scale(1.1);
+    box-shadow: 0 8px 20px rgba(255, 180, 180, 0.781);
+    z-index: 3;
+}
+
+.folder.open .folder__front {
+    transform: skew(15deg) scaleY(0.6);
+}
+
+.folder.open .right {
+    transform: skew(-15deg) scaleY(0.6);
+
+}
+
+.folder__back {
+    position: relative;
+    width: 100px;
+    height: 80px;
+    background: #f8acf4;
+    border-radius: 0px 10px 10px 10px;
+    box-shadow: 5px 5px 10px rgba(39, 34, 34, 0.87), -5px 4px 10px rgba(61, 48, 48, 0.664);
+
+
+}
+
+.folder__back::after {
+    position: absolute;
+    z-index: -1;
+    bottom: 98%;
+    left: 0;
+    content: '';
+    width: 30px;
+    height: 10px;
+    background: #f8acf4;
+    border-radius: 5px 5px 0 0;
+
+
+}
+
+.paper {
+
+    position: absolute;
+    width: 100%;
+    /* antes 280px */
+    height: 60%;
+    /* antes 180px */
+    position: absolute;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    background: url("/src/assets/imagenes/principalAdriana3.webp") no-repeat center center;
+    background-size: cover;
+    z-index: 0;
+    border: 3px solid;
+    transition: all 0.3s ease-in-out;
+
+
+}
+
+.paper:nth-child(2) {
+
+    width: 80%;
+    height: 70%;
+    background: url("/src/assets/imagenes/adriFotos5.webp") no-repeat center center;
+    background-size: cover;
+    z-index: 2;
+    border-radius: 5px 15px 5px 15px;
+
+}
+
+.paper:nth-child(3) {
+
+    width: 90%;
+    height: 60%;
+    background: url("/src/assets/imagenes/principalAdriana1.webp") no-repeat center center;
+    background-size: cover;
+    z-index: 1;
+}
+
+.folder__front {
+    position: absolute;
+    z-index: 3;
+    width: 100%;
+    height: 100%;
+    background: #f7c3f4;
+    border-radius: 5px 10px 10px 10px;
+    transform-origin: bottom;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Folder: texto invitado */
+.nombre_invitado {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 80%;
+    font-family: "Playfair Display", serif;
+    overflow: hidden;
+}
+
+.titulo_invitado {
+    font-size: 0.1rem;
+    font-weight: 600;
+    background: linear-gradient(45deg, #b97a10, #eac117, #f5d76e, #b97a10);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.nombre_familia {
+    font-family: 'Beau Rivage', 'Alex Brush', serif;
+    margin-top: 0.1rem;
+    font-size: 0.4em;
+    font-weight: bold;
+    background: linear-gradient(45deg, #a97400, #ffcc00, #ffe066, #a97400);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* 📱 CELULARES PEQUEÑOS (<= 480px) */
+@media (max-width: 480px) {
+    .folder.open .paper:nth-child(1) {
+
+        width: 60px;
+        height: 60px;
+        border: 3px solid;
+
+    }
+
+    .folder.open .paper:nth-child(1):hover {
+        transform: translate(-50%, -50%) rotateZ(-18deg) scale(1.1);
+        box-shadow: 0 8px 20px rgba(255, 180, 180, 0.781);
+        z-index: 3;
+    }
+
+    .folder.open .paper:nth-child(2) {
+        transform: translate(10%, -80%) rotateZ(-4deg);
+        width: 90px;
+        height: 60px;
+        border: 5px solid;
+    }
+
+    .folder.open .paper:nth-child(2):hover {
+        transform: translate(10%, -80%) rotateZ(10deg) scale(1.2);
+
+
+    }
+
+    .folder.open .paper:nth-child(3) {
+        transform: translate(120%, -50%) rotateZ(5deg);
+        width: 60px;
+        height: 60px;
+        border: 3px solid;
+
+    }
+
+    .folder.open .paper:nth-child(3):hover {
+        transform: translate(120%, -50%) rotateZ(5deg) scale(1.1);
+    }
+
+    
+
+    .text_letraModerna {
+        font-size: 2.5rem;
+    }
+
+
+    .titulo_invitado {
+        font-size: 0.1rem;
+    }
+
+    .nombre_familia {
+        font-size: 0.5rem;
+    }
+
+
+}
+
+/* 📱📱 CELULARES GRANDES / TABLETS VERTICALES (481–768px) */
+@media (max-width: 768px) {
+
+  
+
+    .text_letraModerna {
+        font-size: 2.5rem;
+    }
+
+    .titulo_invitado {
+        font-size: 0.5rem;
+    }
+
+    .nombre_familia {
+        font-size: 0.7rem;
+    }
+
+}
+
+/* 💻 TABLETS / LAPTOPS PEQUEÑAS (769–1100px) */
+@media (max-width: 1100px) {
+   
+
+    .text_letraModerna {
+        font-size: 3rem;
+    }
+
+    .titulo_invitado {
+        font-size: 0.5rem;
+    }
+
+    .nombre_familia {
+        font-size: 0.8rem;
+    }
+}
+
+/* 🖥️ PANTALLAS GRANDES (>= 1101px) */
+@media (min-width: 1101px) {
+   
+    .text_letraModerna {
+        font-size: 3.2rem;
+    }
+    .titulo_invitado {
+        font-size: 0.5rem;
+    }
+
+    .nombre_familia {
+        font-size: 0.8rem;
+    }
+}

@@ -1,0 +1,146 @@
+/* Contenedor principal para centrar el sobre */
+.sobre-container {
+    perspective: 1000px; /* Habilita efectos 3D */
+    width: 300px; 
+    height: 200px;
+    cursor: pointer;
+    margin: 50px auto;
+    position: relative;
+    user-select: none;
+}
+
+/* Estilo de la caja 3D del sobre */
+.sobre {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.6s ease-out; /* Transición general */
+}
+
+/* El fondo del sobre que siempre se ve */
+.sobre-base {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #0098fd; /* Plata/Gris Claro */
+    border-radius: 5px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Cuerpo frontal (donde está el sello y la cinta) */
+.sobre-cuerpo {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #E0E0E0; /* Plata/Gris Claro */
+    border-radius: 5px;
+    z-index: 10;
+}
+
+/* Solapa superior que se mueve */
+.sobre-solapa-superior {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50%; /* Altura de la solapa */
+   
+    border-radius: 0 0 50% 0%; /* Borde redondeado abajo, pero lo giraremos */
+    transform-origin: top center; /* Gira desde la parte superior */
+    transition: transform 0.6s ease-out;
+    z-index: 20;
+    /* Crear la forma de punta de la solapa con clip-path (o bordes) */
+    clip-path: polygon(0 0, 50% 100%, 100% 0);
+    background-color: #ccc9c9;
+    box-shadow: 50px 50px 50px rgba(0, 0, 0, 1);
+}
+
+/* Tarjeta interior (lo que se ve al abrir) */
+.sobre-tarjeta-interior {
+    font-family: 'Beau Rivage', cursive;
+    font-size: 1.5rem;
+    position: absolute;
+    width: 90%;
+    height: 90%;
+    top: 5%;
+    left: 5%;
+    padding: 15px;
+    background-color: #F5F5DC; /* Crema Dorado para la tarjeta */
+    color: #084C9F; /* Texto en Azul Zafiro */
+    border-radius: 3px;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 15;
+    /* Inicialmente, la tarjeta está escondida */
+    transform: translateY(100%); 
+    opacity: 0;
+    transition: all 0.6s ease-out 0.2s; /* Animación con retraso */
+}
+
+/* --- ESTADOS DE APERTURA (.abierto) --- */
+
+/* La solapa se abre */
+.sobre.abierto .sobre-solapa-superior {
+    /* Gira hacia atrás y se levanta ligeramente */
+    transform: rotateX(180deg) translateZ(10px);
+}
+
+/* La tarjeta interior se revela */
+.sobre.abierto .sobre-tarjeta-interior {
+    /* Mueve la tarjeta hacia arriba y la muestra */
+    transform: translateY(0);
+    opacity: 1;
+}
+
+/* El cuerpo principal se desplaza un poco hacia abajo (opcional) */
+.sobre.abierto .sobre-cuerpo {
+    transform: translateY(5px);
+}
+
+/* --- DETALLES DE CINTA Y SELLO (DECORACIÓN) --- */
+
+.sobre-cinta-sello {
+    position: absolute;
+    width: 100%;
+    height: 20px;
+    top: calc(50% - 10px);
+    background-color: #C0C0C0; /* Cinta plateada */
+    z-index: 25;
+}
+
+/* Sello (Circular Dorado con cáliz) */
+.sobre-cinta-sello::before {
+    content: '';
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    top: -10px;
+    left: calc(50% - 20px);
+    background-color: #E0E0E0; /* Círculo exterior gris/plata */
+    border: 3px solid #FFC72C; /* Borde dorado */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    z-index: 30;
+    
+    /* Simulación del cáliz dorado (usando CSS o mejor con una imagen de fondo) */
+    /* Para el ejemplo simple, solo el círculo dorado */
+    /* Si quieres el cáliz, deberías usar una imagen de fondo o un ícono/fuente de íconos */
+}
+
+/* Ocultar la cinta/sello cuando se abre el sobre */
+.sobre.abierto .sobre-cinta-sello {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+/* Mensaje de apoyo */
+.mensaje-sobre {
+    position: absolute;
+    bottom: -30px;
+    width: 100%;
+    text-align: center;
+    color: #F5F5DC;
+    font-size: 0.9rem;
+    text-shadow: 1px 1px 2px #084C9F;
+}
+

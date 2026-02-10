@@ -1,0 +1,63 @@
+:root {
+  --rosa-empolvado: #fd3da3;
+  --dorado: #ffd700;
+  --blanco-perla: #fae3eb;
+}
+
+.obsequios-section {
+  width: 100%;
+  min-height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(180deg, rgba(255, 244, 250, 0.6), rgba(255, 238, 244, 0.5));
+  padding: 40px 20px;
+  box-sizing: border-box;
+}
+
+.obsequios-content {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.gift-icon {
+  font-size: 3rem;
+  color: var(--rosa-empolvado);
+  cursor: default;
+}
+
+.obsequios-text {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.8rem;
+  font-weight: 600;
+  background: linear-gradient(90deg, var(--rosa-empolvado), var(--dorado));
+  background-clip: text;          /* versión estándar */
+  -webkit-background-clip: text;  /* para Chrome, Safari, Edge */
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  margin: 0 10px;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .obsequios-text {
+    font-size: 1.4rem;
+  }
+
+  .gift-icon {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .obsequios-text {
+    font-size: 1.2rem;
+  }
+
+  .gift-icon {
+    font-size: 2rem;
+  }
+}

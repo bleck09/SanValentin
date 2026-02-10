@@ -1,0 +1,126 @@
+/* Contenedor */
+.musica-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 2rem;
+  text-align: center;
+}
+
+.titulo-musica {
+  font-family: 'Beau Rivage', cursive;
+  font-size: 1.2rem;
+  color: #084C9F;
+  text-shadow: 0 0 8px rgba(0, 86, 179, 0.6);
+}
+
+/* Controles */
+.controles-musica {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.boton-musica {
+  background: transparent;
+  border: none;
+  font-size: 2rem;
+  color: #0056B3;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.boton-musica:hover {
+  transform: scale(1.15);
+  color: #002C6F;
+}
+
+.boton-musica.principal {
+  background: linear-gradient(135deg, #E0E0E0, #FFC72C);
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #084C9F;
+  box-shadow: 0 0 20px rgba(0, 86, 179, 0.5);
+}
+
+/* Barra de progreso */
+.barra-progreso {
+  width: 100%;
+  max-width: 300px;
+  height: 6px;
+  border-radius: 999px;
+  appearance: none;
+  background: linear-gradient(90deg, #3dc8ff, #0056B3);
+}
+
+.barra-progreso::-webkit-slider-thumb {
+  appearance: none;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #002C6F;
+  cursor: pointer;
+}
+
+.barra-progreso::-moz-range-thumb {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #002C6F;
+}
+
+.volumen-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+/* Slider vertical ajustado: empieza desde la parte superior del botón */
+.slider-volumen-popup {
+  position: absolute;
+  bottom: 100%; /* arriba del botón */
+  left: 50%;
+  transform: translateX(-50%);
+  background: #E0E0E0;
+  padding: 8px 0; /* padding vertical para centrar slider */
+  border-radius: 12px;
+  height: 120px; /* altura del contenedor */
+  width: 40px;   /* ancho del contenedor, deja espacio para el slider */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  z-index: 10;
+}
+
+.slider-vertical {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100px;  /* longitud del slider */
+  height: 6px;   /* grosor */
+  transform: rotate(-90deg);
+  transform-origin: center center; /* para que rote en su centro */
+  background: linear-gradient(#0056B3, #15ebeb);
+  border-radius: 50px;
+}
+
+.slider-vertical::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #002C6F;
+  cursor: pointer;
+}
+
+.slider-vertical::-moz-range-thumb {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #002C6F;
+  cursor: pointer;
+}

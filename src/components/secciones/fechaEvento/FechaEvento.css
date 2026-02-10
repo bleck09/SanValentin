@@ -1,0 +1,155 @@
+/* Variables de color */
+:root {
+  /* Colores masculinos basados en la imagen (Azul Marino y Blanco/Plateado) */
+  --blanco-puro: #FFFFFF;
+  --azul-marino: #002C6F; /* Color de fondo oscuro principal */
+  --gris-claro-brillante: #C0C0C0; /* Color para botón y detalles */
+  --azul-real: #0056B3; /* Azul más brillante para hover y acento */
+  --plata-brillante: #E0E0E0; /* Otro tono claro para contraste */
+  --oro-acento: #FFC72C; /* Dorado para acentos especiales */
+}
+
+.fechaEvento-wrap {
+  display: flex;
+  justify-content: center;
+  margin: 40px 20px 0 20px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.cal-card {
+  /* Fondo: Transparente con un toque de Plata Brillante */
+  background: rgba(224, 224, 224, 0.25); 
+  backdrop-filter: blur(12px);
+  border-radius: 20px;
+  padding: 20px;
+  /* Sombra: Azul Marino semi-transparente */
+  box-shadow: 0 0 25px rgba(0, 44, 111, 0.514); 
+  max-width: 400px;
+  width: 100%;
+}
+
+.mes-titulo {
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem;
+  /* Degradado: Azul Marino (#002C6F) a Dorado (#FFC72C) */
+  background: linear-gradient(90deg, var(--azul-marino), var(--oro-acento));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.grid-legend {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: var(--azul-real); /* Azul Real para la leyenda (días de la semana) */
+}
+
+.grid-days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 5px;
+}
+
+.dia {
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  color: var(--azul-marino); /* Azul Marino para los días normales */
+  position: relative;
+}
+
+.dia.vacio {
+  background: transparent;
+}
+
+.dia-especial {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 38px;
+  height: 38px;
+}
+
+.corazon {
+  position: absolute;
+  font-size: 2rem;
+  color: var(--azul-real); /* Dorado para el corazón/sello */
+  animation: latido 1s infinite;
+}
+
+.numero-dia {
+  position: absolute;
+  font-weight: bold;
+  color: var(--blanco-puro); /* Blanco para el número sobre el corazón */
+  font-size: 1rem;
+}
+
+/* Animación de latido */
+@keyframes latido {
+  /* No se necesita cambiar colores, solo escala */
+  0%, 100% { transform: scale(2.5); }
+  50% { transform: scale(2.7); }
+}
+
+/* RESPONSIVE */
+/* (Se mantienen igual, solo se han cambiado los colores en las clases utilizadas) */
+@media(max-width: 768px) {
+  .cal-card {
+    max-width: 90%;
+    padding: 15px;
+  }
+
+  .dia {
+    height: 40px;
+    font-size: 0.9rem;
+  }
+
+  .dia-especial {
+    width: 32px;
+    height: 32px;
+  }
+
+  .corazon {
+    font-size: 1rem;
+  }
+
+  .numero-dia {
+    font-size: 0.9rem;
+  }
+
+  .mes-titulo {
+    font-size: 2rem;
+  }
+}
+
+@media(max-width: 480px) {
+  .dia {
+    height: 35px;
+    font-size: 0.8rem;
+  }
+
+  .dia-especial {
+    width: 28px;
+    height: 28px;
+  }
+
+  .corazon {
+    font-size: 0.7rem;
+  }
+
+  .numero-dia {
+    font-size: 0.75rem;
+  }
+
+  .mes-titulo {
+    font-size: 2rem;
+  }
+}

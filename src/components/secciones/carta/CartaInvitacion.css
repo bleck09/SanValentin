@@ -1,0 +1,52 @@
+.folder-container {
+  width: 250px;
+  height: 180px;
+  margin: 50px auto;
+  perspective: 800px;
+  cursor: pointer;
+}
+
+.folder {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: all 0.5s ease;
+}
+
+.folder-back {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+}
+
+.folder-front, .folder-front.right {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: var(--folder-color);
+  border-radius: 10px;
+  transform-origin: bottom;
+  transition: all 0.5s ease;
+  z-index: 3;
+}
+
+.folder-front.right {
+  transform-origin: bottom;
+}
+
+.paper {
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  width: 90%;
+  height: 80%;
+  border-radius: 8px;
+  z-index: 2;
+}
+
+.folder.open .folder-front {
+  transform: rotateX(-100deg);
+}

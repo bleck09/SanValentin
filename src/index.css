@@ -1,0 +1,48 @@
+/* 🎨 Paleta 60/30/10 - Tonos Masculinos */
+:root {
+  --blanco-puro: #FFFFFF; /* 60% fondo/texto claro */
+  --azul-marino: #002C6F; /* 30% base/fondo oscuro principal */
+  --gris-claro-brillante: #C0C0C0; /* 10% acento visible (Botón) */
+  --azul-real: #0056B3; /* detalles (Sombra de texto) */
+  --plata-brillante: #E0E0E0; /* decorativo (Scrollbar y textos) */
+}
+
+/* Base global */
+/* 🔥 CORRECCIÓN: Usar min-height para permitir el scroll de la ventana */
+html, body, #root {
+  min-height: 100vh; /* Permite que el contenido se desborde */
+  margin: 0;
+  padding: 0;
+
+  /* ✅ Usa tu color de fondo principal (Azul Marino) */
+  /* NOTA: Si quieres que el fondo *fuera* de la invitación sea blanco o muy claro, usa --blanco-puro */
+  background-color: var(--plata-brillante); 
+
+  /* ✅ Texto por defecto en un tono oscuro suave para contraste (Azul Marino) */
+  color: var(--azul-marino); 
+  font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+  /* transiciones suaves para que los cambios no se vean bruscos */
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Reset y consistencia general */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Scrollbar con colores neutros y brillantes */
+::-webkit-scrollbar {
+  width: 8px; /* Lo aumenté para que se vea mejor */
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--azul-real); /* Azul para el pulgar */
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--gris-claro-brillante); /* Gris claro para la pista */
+}

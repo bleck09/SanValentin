@@ -1,0 +1,47 @@
+/* Contenedor centrado */
+.inv-btn-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 0;
+    text-align: center;
+}
+
+/* Botón con estilo único */
+.inv-boton {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 24px;
+    border-radius: 999px;
+    
+    /* REINICIO DE FUENTE: Evita que herede la fuente cursiva */
+    font-family: 'Poppins', sans-serif; /* Asegúrate de que esta fuente esté cargada */
+    
+    /* Gradiente de Crema (#F5F5DC) y Oro (#FFC72C) */
+    background: linear-gradient(90deg, #F5F5DC, #0998f7); 
+    color: #003870; /* Texto en Azul Zafiro */
+    font-weight: 700;
+    font-size: 1rem;
+    text-decoration: none;
+    /* Sombra en Azul Zafiro (usando un RGBA) */
+    box-shadow: 0 10px 30px rgba(8, 76, 159, 0.3); 
+    transition: transform 0.16s ease, box-shadow 0.16s ease;
+    text-align: center;
+}
+
+/* Hover refinado */
+.inv-boton:hover {
+    transform: translateY(-4px);
+    /* Sombra más profunda en Azul Zafiro */
+    box-shadow: 0 18px 40px rgba(8, 76, 159, 0.5);
+    background: #2ca0ff; /* Color dorado sólido al pasar el ratón */
+}
+
+/* Icono */
+.inv-icon {
+    font-size: 1.4rem;
+    display: flex;
+    align-items: center;
+}

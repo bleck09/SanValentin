@@ -1,0 +1,102 @@
+/* Contenedor general */
+.carusel_3d_Diablada {
+  background-color: transparent;
+  padding: 80px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  user-select: none;
+  overflow: visible;
+}
+
+/* Carrusel */
+.card-3d_Diablada {
+  position: relative;
+  width: 150px;   /* ancho total del carrusel */
+  height: 220px;  /* altura total del carrusel */
+  transform-style: preserve-3d;
+  will-change: transform;
+}
+
+/* Tarjetas */
+.card-3d_Diablada div {
+  position: absolute;
+  width: 100%;   /* ocupar todo el contenedor */
+  height: 100%;  /* ocupar todo el contenedor */
+  top: 50%;
+  left: 50%;
+  transform-origin: center center;
+  overflow: hidden;  /* importante para que la imagen no se salga */
+  backface-visibility: hidden;
+  border-radius: 1rem;
+}
+
+/* Imagen */
+.card-3d_Diablada img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* rellena todo el contenedor */
+  border-radius: 1rem;
+  pointer-events: none;
+}
+
+/* REFLEJO */
+.card-3d_Diablada div::after {
+  content: "";
+  position: absolute;
+  bottom: -10%;
+  width: 100%;
+  height: 100%;
+  transform: scaleY(-1);
+  opacity: 0.2;
+  filter: blur(2px);
+  border-radius: 1rem;
+}
+
+/* Posiciones de las tarjetas */
+.card-3d_Diablada div:nth-child(1) { transform: translate(-50%, -50%) rotateY(0deg) translateZ(220px); }
+.card-3d_Diablada div:nth-child(2) { transform: translate(-50%, -50%) rotateY(45deg) translateZ(220px); }
+.card-3d_Diablada div:nth-child(3) { transform: translate(-50%, -50%) rotateY(90deg) translateZ(220px); }
+.card-3d_Diablada div:nth-child(4) { transform: translate(-50%, -50%) rotateY(135deg) translateZ(220px); }
+.card-3d_Diablada div:nth-child(5) { transform: translate(-50%, -50%) rotateY(180deg) translateZ(220px); }
+.card-3d_Diablada div:nth-child(6) { transform: translate(-50%, -50%) rotateY(225deg) translateZ(220px); }
+.card-3d_Diablada div:nth-child(7) { transform: translate(-50%, -50%) rotateY(270deg) translateZ(220px); }
+.card-3d_Diablada div:nth-child(8) { transform: translate(-50%, -50%) rotateY(315deg) translateZ(220px); }
+
+/* Responsive básico */
+@media (min-width: 769px) and (max-width: 1100px) {
+  .carusel_3d_Diablada {
+  padding: 120px 0;
+}
+  .card-3d_Diablada {
+    width: 250px;
+    height: 330px;
+  }
+  .card-3d_Diablada div:nth-child(1) { transform: translate(-50%, -50%) rotateY(0deg) translateZ(350px); }
+.card-3d_Diablada div:nth-child(2) { transform: translate(-50%, -50%) rotateY(45deg) translateZ(350px); }
+.card-3d_Diablada div:nth-child(3) { transform: translate(-50%, -50%) rotateY(90deg) translateZ(350px); }
+.card-3d_Diablada div:nth-child(4) { transform: translate(-50%, -50%) rotateY(135deg) translateZ(350px); }
+.card-3d_Diablada div:nth-child(5) { transform: translate(-50%, -50%) rotateY(180deg) translateZ(350px); }
+.card-3d_Diablada div:nth-child(6) { transform: translate(-50%, -50%) rotateY(225deg) translateZ(350px); }
+.card-3d_Diablada div:nth-child(7) { transform: translate(-50%, -50%) rotateY(270deg) translateZ(350px); }
+.card-3d_Diablada div:nth-child(8) { transform: translate(-50%, -50%) rotateY(315deg) translateZ(350px); }
+
+}
+@media (min-width: 1101px) and (max-width: 1500px) {
+   .carusel_3d_Diablada {
+  padding: 150px 0;
+}
+  .card-3d_Diablada {
+    width: 280px;
+    height: 350px;
+  }
+  .card-3d_Diablada div:nth-child(1) { transform: translate(-50%, -50%) rotateY(0deg) translateZ(400px); }
+.card-3d_Diablada div:nth-child(2) { transform: translate(-50%, -50%) rotateY(45deg) translateZ(400px); }
+.card-3d_Diablada div:nth-child(3) { transform: translate(-50%, -50%) rotateY(90deg) translateZ(400px); }
+.card-3d_Diablada div:nth-child(4) { transform: translate(-50%, -50%) rotateY(135deg) translateZ(400px); }
+.card-3d_Diablada div:nth-child(5) { transform: translate(-50%, -50%) rotateY(180deg) translateZ(400px); }
+.card-3d_Diablada div:nth-child(6) { transform: translate(-50%, -50%) rotateY(225deg) translateZ(400px); }
+.card-3d_Diablada div:nth-child(7) { transform: translate(-50%, -50%) rotateY(270deg) translateZ(400px); }
+.card-3d_Diablada div:nth-child(8) { transform: translate(-50%, -50%) rotateY(315deg) translateZ(400px); }
+
+}

@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Rajdhani:wght@500;700&display=swap');
+
+.countdown-container {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: 40px 0;
+}
+
+.countdown-item {
+  background: linear-gradient(145deg, #c5caf7, #32beff);
+  border-radius: 16px;
+  width: 90px;
+  height: 90px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 20px rgb(51, 86, 247);
+  color: #404dff;
+  font-family: 'Orbitron', sans-serif;
+  transition: transform 0.3s;
+}
+
+.countdown-item:hover {
+  transform: scale(1.05);
+}
+
+.numero {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #574bff;
+}
+
+.label {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #4c0040;
+  margin-top: 2px;
+  font-family: 'Rajdhani', sans-serif;
+}
+
+.countdown-completo {
+  font-size: 0.3rem;
+  color: #012c6d;
+  text-align: center;
+  font-family: 'Orbitron', sans-serif;
+  animation: latido 1s infinite;
+}
+
+@keyframes latido {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+}
+
+/* RESPONSIVE */
+@media(max-width: 768px) {
+  .countdown-item {
+    width: 70px;
+    height: 70px;
+  }
+  .numero {
+    font-size: 1.5rem;
+  }
+  .label {
+    font-size: 0.8rem;
+  }
+}
+
+@media(max-width: 480px) {
+  .countdown-item {
+    width: 60px;
+    height: 60px;
+  }
+  .numero {
+    font-size: 1.2rem;
+  }
+  .label {
+    font-size: 0.7rem;
+  }
+}
