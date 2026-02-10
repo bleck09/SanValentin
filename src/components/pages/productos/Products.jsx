@@ -26,7 +26,7 @@ function Products() {
  const cardsData = [
     {
       id: 1,
-      img: "/Luis/imagenes/luisfoto.png",
+      img: "/SanValentin/imagenes/luisfoto.png",
       title: 'Foto Luis Miguel',
     },
     // Si agregas más tarjetas, esta lógica solo usará la primera (índice 0)

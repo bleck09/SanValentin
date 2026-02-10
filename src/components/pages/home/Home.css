@@ -1,130 +1,101 @@
 :root {
-  /* Colores masculinos basados en la imagen (Azul Marino y Blanco/Plateado) */
-  --blanco-puro: #FFFFFF;
-  --azul-marino: #002C6F; /* Color de fondo oscuro principal */
-  --gris-claro-brillante: #C0C0C0; /* Color para botón y detalles */
-  --azul-real: #0056B3; /* Azul más brillante para hover */
-  --plata-brillante: #E0E0E0; /* Otro tono claro para contraste */
+  --rosa-suave: #f8c8dc;
+  --rosa-medio: #f48fb1;
+  --rosa-oscuro: #d81b60;
+  --blanco: #ffffff;
 }
 
-/* ============================== */
-/* 🎯 BASE: MOBILE FIRST (360–480px) */
-/* ============================== */
-
-.fondo_invitacion {
+/* Fondo */
+.fondo_romantico {
   height: 100vh;
-  /* El fondo ahora usa la variable de color si quieres un color sólido, 
-  o mantiene tu imagen de fondo original (FondoLuis.jpeg) con un overlay azul. */
-  background:
-    linear-gradient(rgba(0, 44, 111, 0.2), rgba(0, 44, 111, 0.5)), /* Overlay azul más sutil */
-    url("/src/assets/imagenes/FondoLuis.jpeg") no-repeat center center;
-  background-size: cover;
+  background: linear-gradient(135deg, #fff0f5, var(--rosa-suave));
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 1rem;
 }
 
-.overlay {
+/* Contenedor */
+.contenedor_formulario {
+  background: var(--blanco);
+  padding: 2.5rem;
+  border-radius: 20px;
+  box-shadow: 0 15px 40px rgba(216, 27, 96, 0.2);
   text-align: center;
-  color: var(--blanco-puro); /* Texto en blanco puro */
-  padding: 2rem;
+  max-width: 400px;
+  width: 100%;
 }
 
-/* Título principal */
-.Titulo_luis_Principal {
-  font-family: 'Beau Rivage', 'Alex Brush', serif;
-  font-size: 2.5rem;
-  /* BASE MÓVIL */
-  font-weight: 800;
-  color: var(--blanco-puro); /* Texto en blanco */
-  text-align: center;
-  letter-spacing: 0.1em;
-  /* Sombra de texto en azul real */
-  text-shadow: 2px 2px 5px var(--azul-real); 
-  margin-top: 20px;
-  margin-bottom: 20px;
-}
-
-/* Subtítulos (No aparece en tu código HTML actual, pero actualizo el color) */
-.text_letraModerna {
-  font-family: 'Georgia', serif;
-  font-style: italic;
-  font-size: 2.2rem;
-  color: var(--plata-brillante); /* Color plateado */
+/* Título */
+.titulo_romantico {
+  color: var(--rosa-oscuro);
   margin-bottom: 2rem;
+  font-size: 1.3rem;
 }
 
+/* Formulario */
+.formulario_romantico {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
 
-.mensaje_invitacion {
-  font-family: 'Beau Rivage', cursive;
-  font-size: 2rem;
-  color: var(--blanco-puro); /* Texto en blanco */
-  /* Sombra de texto en gris claro/plata */
-  text-shadow: 0 0 8px var(--gris-claro-brillante); 
-  letter-spacing: 1px;
-  padding-top: 50px;
-  padding-bottom: 10px;
+/* Inputs */
+.formulario_romantico input {
+  padding: 0.8rem;
+  border-radius: 10px;
+  border: 1px solid #eee;
+  outline: none;
+  text-align: center;
+  transition: 0.3s ease;
+}
+
+.formulario_romantico input:focus {
+  border-color: var(--rosa-medio);
+  box-shadow: 0 0 8px rgba(244, 143, 177, 0.5);
 }
 
 /* Botón */
-.btn_verInvitacion {
-  display: inline-block;
-  padding: 1rem;
-  font-size: 1rem;
-  font-weight: bold;
-  color: var(--azul-marino); /* Texto oscuro en el botón */
-  background: var(--gris-claro-brillante); /* Botón en color plateado/gris claro */
+.btn_verificar {
+  background: var(--rosa-medio);
+  color: var(--blanco);
+  border: none;
+  padding: 0.8rem;
   border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.btn_verificar:hover {
+  background: var(--rosa-oscuro);
+}
+
+/* Error */
+.mensaje_error {
+  margin-top: 1rem;
+  color: var(--rosa-oscuro);
+}
+
+/* Botón Invitación */
+.inv-boton {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 1rem 1.5rem;
+  background: var(--rosa-medio);
+  color: white;
+  border-radius: 50px;
   text-decoration: none;
-  transition: all 0.3s ease-in-out;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-  margin-bottom: 2rem;
+  font-weight: bold;
+  margin-top: 1.5rem;
+  transition: 0.3s ease;
 }
 
-.btn_verInvitacion:hover {
-  background: var(--plata-brillante); /* Se aclara al pasar el ratón */
-  transform: translateY(-3px);
+.inv-boton:hover {
+  background: var(--rosa-oscuro);
 }
 
-
-/* ============================== */
-/* 📱 MÓVILES GRANDES (>=480px) */
-/* ============================== */
-@media (min-width: 480px) {
-  .Titulo_luis_Principal {
-    font-size: 4rem;
-  }
-
-}
-
-/* ============================== */
-/* 📲 TABLETS (>=768px) */
-/* ============================== */
-@media (min-width: 768px) {
-  .Titulo_luis_Principal {
-    font-size: 5rem;
-  }
-  .btn_verInvitacion {
-    font-size: 1.2rem;
-    padding: 0.8rem 2rem;
-  }
-}
-
-/* ============================== */
-/* 💻 LAPTOPS (>=1100px) */
-/* ============================== */
-@media (min-width: 1100px) {
-  .Titulo_luis_Principal {
-    font-size: 6rem;
-  }
-  
-}
-
-/* ============================== */
-/* 🖥 PANTALLAS GRANDES (>=1400px) */
-/* ============================== */
-@media (min-width: 1400px) {
-  .Titulo_luis_Principal {
-    font-size: 6.5rem;
-  }
+.inv-icon {
+  font-size: 1.2rem;
 }
