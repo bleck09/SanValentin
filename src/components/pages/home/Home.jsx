@@ -19,7 +19,7 @@ const personas = {
     comida: "sushi",
     color: "azul",
     nosotros: "eternidad",
-    ruta: "/Productos1",
+    ruta: "/maria",
     nombreMostrar: "María"
   },
   sofia: {
@@ -27,7 +27,7 @@ const personas = {
     comida: "pasta",
     color: "lila",
     nosotros: "magia",
-    ruta: "/Productos2",
+    ruta: "/sofia",
     nombreMostrar: "Sofía"
   }
 };

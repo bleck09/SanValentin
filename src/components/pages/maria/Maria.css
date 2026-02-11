@@ -1,0 +1,126 @@
+.maria-container {
+  min-height: 100vh;
+  background: linear-gradient(to bottom, #0f2027, #203a43, #2c5364);
+  color: white;
+  text-align: center;
+  padding: 40px 20px;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* 🌌 Estrellas animadas */
+.stars {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  background-image: radial-gradient(white 1px, transparent 1px);
+  background-size: 50px 50px;
+  animation: moveStars 60s linear infinite;
+  z-index: 0;
+  opacity: 0.3;
+}
+
+@keyframes moveStars {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 1000px 1000px;
+  }
+}
+
+/* Título */
+.titulo-maria {
+  font-size: 3rem;
+  font-family: 'Beau Rivage', cursive;
+  position: relative;
+  z-index: 1;
+}
+
+/* Subtitulo */
+.subtitulo-maria {
+  margin-top: 10px;
+  font-size: 1.2rem;
+  color: #e0c3fc;
+  position: relative;
+  z-index: 1;
+}
+
+/* Botón */
+.boton-maria {
+  margin-top: 25px;
+  padding: 12px 25px;
+  border-radius: 30px;
+  border: none;
+  background: #9c27b0;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+  position: relative;
+  z-index: 1;
+}
+
+.boton-maria:hover {
+  background: #ba68c8;
+}
+
+/* Carta */
+.carta-maria {
+  margin-top: 30px;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 20px;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+  z-index: 1;
+  position: relative;
+}
+
+/* Galería */
+.galeria-maria {
+  margin-top: 60px;
+  z-index: 1;
+  position: relative;
+}
+
+.fotos {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+.foto {
+  width: 150px;
+  height: 200px;
+  background: white;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  transform: rotate(-5deg);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+  transition: 0.3s;
+}
+
+.foto:nth-child(2) {
+  transform: rotate(5deg);
+}
+
+.foto:hover {
+  transform: scale(1.1);
+}
+
+/* Promesa */
+.promesa {
+  margin-top: 80px;
+  font-size: 1.2rem;
+  color: #f8bbd0;
+}
