@@ -93,17 +93,17 @@ function Sofia() {
   <div className="sofia-polaroid-container">
 
     <div className="sofia-polaroid">
-      <img src="/SanValentin/imagenes/sofia1.jpg" alt="recuerdo1" />
+      <img src="/SanValentin/imagenes/Fondo1.jpeg" alt="recuerdo1" />
       <p>Ese día que nunca olvidaré 💕</p>
     </div>
 
     <div className="sofia-polaroid">
-      <img src="/SanValentin/imagenes/sofia2.jpg" alt="recuerdo2" />
+      <img src="/SanValentin/imagenes/Fondo1.jpeg" alt="recuerdo2" />
       <p>Tu sonrisa ilumina todo ✨</p>
     </div>
 
     <div className="sofia-polaroid">
-      <img src="/SanValentin/imagenes/sofia3.jpg" alt="recuerdo3" />
+      <img src="/SanValentin/imagenes/Fondo1.jpeg" alt="recuerdo3" />
       <p>Momentos que valen oro 💖</p>
     </div>
 
