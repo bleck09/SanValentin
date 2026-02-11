@@ -99,3 +99,44 @@
 .inv-icon {
   font-size: 1.2rem;
 }
+
+/* Modal fondo oscuro */
+.modal_overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(216, 27, 96, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(5px);
+  z-index: 999;
+}
+
+/* Caja modal */
+.modal_contenido {
+  background: white;
+  padding: 2rem;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+}
+
+/* Botón modal */
+.btn_modal {
+  margin-top: 1rem;
+  padding: 0.6rem 1.2rem;
+  background: #f48fb1;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn_modal:hover {
+  background: #d81b60;
+}

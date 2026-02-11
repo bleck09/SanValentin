@@ -1,8 +1,14 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { FaRegEnvelopeOpen } from "react-icons/fa";
 import "./Home.css";
+
+const respuestasCorrectas = {
+  comida: "pizza",
+  color: "rosa",
+  nosotros: "destino"
+};
 
 const Home = () => {
   const [form, setForm] = useState({
@@ -12,7 +18,10 @@ const Home = () => {
   });
 
   const [correcto, setCorrecto] = useState(false);
-  const [error, setError] = useState("");
+  const [modal, setModal] = useState({
+    visible: false,
+    mensaje: ""
+  });
 
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
@@ -21,15 +30,32 @@ const Home = () => {
   const verificar = (e) => {
     e.preventDefault();
 
-    if (
-      form.comida.toLowerCase().trim() === "pizza" &&
-      form.color.toLowerCase().trim() === "rosa" &&
-      form.nosotros.toLowerCase().trim() === "destino"
-    ) {
+    let errores = [];
+
+    Object.keys(respuestasCorrectas).forEach((campo, index) => {
+      if (
+        form[campo].toLowerCase().trim() !== respuestasCorrectas[campo]
+      ) {
+        errores.push(index + 1);
+      }
+    });
+
+    if (errores.length === 0) {
       setCorrecto(true);
-      setError("");
     } else {
-      setError("Mmm... creo que necesitas conocerme un poquito más 💕");
+      setModal({
+        visible: true,
+        mensaje: `Te equivocaste en la pregunta ${errores.join(", ")} 💔`
+      });
+
+      // Borra solo las incorrectas
+      let nuevoForm = { ...form };
+      errores.forEach((num) => {
+        const campo = Object.keys(respuestasCorrectas)[num - 1];
+        nuevoForm[campo] = "";
+      });
+
+      setForm(nuevoForm);
     }
   };
 
@@ -37,14 +63,9 @@ const Home = () => {
     <div className="fondo_romantico">
       <div className="contenedor_formulario">
 
-        <motion.h1 
-          className="titulo_romantico"
-          initial={{ opacity: 0, y: -30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1 }}
-        >
+        <h1 className="titulo_romantico">
           Solo quien conoce mi corazón puede abrir esta invitación 💖
-        </motion.h1>
+        </h1>
 
         {!correcto && (
           <form onSubmit={verificar} className="formulario_romantico">
@@ -53,6 +74,7 @@ const Home = () => {
               type="text"
               name="comida"
               placeholder="🍕 ¿Mi comida favorita?"
+              value={form.comida}
               onChange={handleChange}
             />
 
@@ -60,6 +82,7 @@ const Home = () => {
               type="text"
               name="color"
               placeholder="🌸 ¿Mi color favorito?"
+              value={form.color}
               onChange={handleChange}
             />
 
@@ -67,6 +90,7 @@ const Home = () => {
               type="text"
               name="nosotros"
               placeholder="💌 ¿Qué somos tú y yo?"
+              value={form.nosotros}
               onChange={handleChange}
             />
 
@@ -76,36 +100,47 @@ const Home = () => {
           </form>
         )}
 
-        {error && <p className="mensaje_error">{error}</p>}
-
         {correcto && (
-          <motion.div
-            className="inv-btn-container"
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8 }}
-          >
-            <motion.div
-              animate={{ scale: [1, 1.1, 1] }}
-              transition={{ repeat: Infinity, duration: 2 }}
-              whileHover={{ scale: 1.08 }}
-              whileTap={{ scale: 0.96 }}
-            >
-              <Link to="/Productos" className="inv-boton">
-                <motion.span
-                  className="inv-icon"
-                  animate={{ rotate: [0, -8, 8, 0] }}
-                  transition={{ repeat: Infinity, duration: 1.4 }}
-                >
-                  <FaRegEnvelopeOpen />
-                </motion.span>
-                Ver invitación
-              </Link>
-            </motion.div>
-          </motion.div>
+          <div className="inv-btn-container">
+            <Link to="/Productos" className="inv-boton">
+              <FaRegEnvelopeOpen />
+              Ver invitación
+            </Link>
+          </div>
         )}
 
       </div>
+
+      {/* MODAL */}
+      <AnimatePresence>
+        {modal.visible && (
+          <motion.div
+            className="modal_overlay"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+          >
+            <motion.div
+              className="modal_contenido"
+              initial={{ scale: 0.8, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.8, opacity: 0 }}
+              transition={{ duration: 0.3 }}
+            >
+              <h3>{modal.mensaje}</h3>
+              <button
+                className="btn_modal"
+                onClick={() =>
+                  setModal({ ...modal, visible: false })
+                }
+              >
+                Intentar otra vez 💗
+              </button>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+
     </div>
   );
 };
