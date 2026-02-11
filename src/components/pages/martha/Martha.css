@@ -1,0 +1,245 @@
+.martha-container {
+  min-height: 100vh;
+  width: 100%;
+  background: linear-gradient(to bottom, #4a001f, #1f000c);
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;   /* 🔥 IMPORTANTE */
+  text-align: center;
+  padding: 40px 20px;
+  color: #fce4ec;
+  overflow-x: hidden;     /* 🔥 evita desbordes laterales */
+}
+
+
+/* Botón música */
+.martha-boton-musica {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  padding: 8px 15px;
+  border-radius: 20px;
+  border: none;
+  background: #c2185b;
+  color: white;
+  cursor: pointer;
+  font-size: 0.8rem;
+}
+
+/* Título */
+.martha-titulo {
+  font-size: 3rem;
+  font-family: 'Beau Rivage', cursive;
+  color: #ffb6c1;
+  margin-top: 60px;
+}
+
+/* Mensaje */
+.martha-mensaje {
+  font-size: 1.2rem;
+  margin-bottom: 25px;
+  color: #f8bbd0;
+}
+
+/* Botón carta */
+.martha-boton {
+  padding: 12px 30px;
+  border-radius: 30px;
+  border: none;
+  background: #ad1457;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-bottom: 30px;
+  transition: 0.3s;
+}
+
+.martha-boton:hover {
+  background: #d81b60;
+}
+
+/* Carta */
+.martha-carta {
+  background: white;
+  color: #6a1b9a;
+  padding: 25px;
+  border-radius: 20px;
+  max-width: 400px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+  margin-bottom: 40px;
+}
+
+/* Álbum */
+.martha-album {
+  margin-top: 40px;
+}
+
+.martha-subtitulo {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+}
+
+.martha-polaroid-container {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.martha-polaroid {
+  background: white;
+  padding: 10px;
+  width: 180px;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+  transform: rotate(-2deg);
+  transition: 0.3s;
+}
+
+.martha-polaroid:nth-child(2) {
+  transform: rotate(2deg);
+}
+
+.martha-polaroid:hover {
+  transform: scale(1.05);
+}
+
+.martha-polaroid img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.martha-polaroid p {
+  font-size: 0.9rem;
+  margin-top: 8px;
+  color: #880e4f;
+}
+
+/* ============================= */
+/* CONTENEDOR GENERAL */
+/* ============================= */
+
+.martha-galeria {
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* ============================= */
+/* GRID ESTILO GALERÍA CELULAR */
+/* ============================= */
+
+.martha-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 20px;
+  width: 100%;
+}
+
+/* ============================= */
+/* TARJETAS */
+/* ============================= */
+
+.martha-card {
+  width: 100%;
+  aspect-ratio: 3 / 4; /* 🔥 vertical para fotos tipo retrato */
+  overflow: hidden;
+  border-radius: 18px;
+  cursor: pointer;
+  background: #fff;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.martha-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
+}
+
+/* ============================= */
+/* IMAGEN */
+/* ============================= */
+
+.martha-card img {
+  width: 100%;
+  height: auto;        /* 🔥 mantiene proporción real */
+  display: block;
+  object-fit: contain; /* 🔥 muestra imagen completa */
+}
+
+/* ============================= */
+/* LIGHTBOX */
+/* ============================= */
+
+.martha-lightbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.85);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  padding: 20px;
+}
+
+.martha-lightbox img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+}
+
+/* ============================= */
+/* RESPONSIVE EXTRA */
+/* ============================= */
+
+@media (max-width: 480px) {
+  .martha-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 18px;
+  max-width: 1000px;
+  margin: auto;
+  padding: 10px;
+}   
+}
+
+@media (max-width: 480px) {
+  .martha-grid {
+    grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+    gap: 15px;
+  }
+
+  .martha-titulo {
+    font-size: 2rem;
+  }
+
+  .martha-mensaje {
+    font-size: 1rem;
+  }
+}
+/* Centrar sección carta sin afectar el resto */
+.martha-carta-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+/* Botón arreglado */
+.martha-boton {
+  padding: 12px 30px;
+  border-radius: 30px;
+  border: none;
+  background: #ad1457;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-bottom: 30px;
+  transition: 0.3s;
+  width: auto; /* 🔥 evita que se estire */
+  max-width: 250px;
+}

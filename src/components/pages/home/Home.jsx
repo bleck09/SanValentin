@@ -30,6 +30,15 @@ const personas = {
     ruta: "/sofia",
     nombreMostrar: "Sofía"
   }
+  ,
+  martha: {
+    alias: ["martha", "mar", "martita"],
+    comida: "pescado",
+    color: "negro",
+    nosotros: "amigos",
+    ruta: "/martha",
+    nombreMostrar: "Martha"
+  }
 };
 
 const Home = () => {
