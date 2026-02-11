@@ -140,3 +140,16 @@
 .btn_modal:hover {
   background: #d81b60;
 }
+
+.mensaje_exito {
+  text-align: center;
+  color: #d81b60;
+}
+
+.mensaje_exito h2 {
+  margin-bottom: 0.5rem;
+}
+
+.mensaje_exito h3 {
+  margin-bottom: 1.5rem;
+}
