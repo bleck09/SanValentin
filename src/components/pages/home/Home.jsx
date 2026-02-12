@@ -7,10 +7,10 @@ import "./Home.css";
 /* 🔐 PERSONAS SECRETAS */
 const personas = {
   ana: {
-    alias: ["ana", "ani", "anita"],
-    comida: "pizza",
-    color: "rosa",
-    codigoSecreto: "12345", // 5 letras
+    alias: ["Blady", "vlady", "bladi", "bleck", "vladi", "vladimir", "bladimir"],
+    comida: "pescado",
+    color: "negro",
+    codigoSecreto: "EBILX", // 5 letras
     pistas: [
       "Inicial del mes en que nos conocimos",
       "La inicial de tu segundo nombre",
