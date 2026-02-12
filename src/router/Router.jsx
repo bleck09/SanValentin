@@ -9,6 +9,7 @@ import App from '../components/templates/App';
 import Home from '../components/pages/home/Home';
 import Login from '../components/pages/login/Login';
 import Martha from '../components/pages/martha/Martha';
+import Carla from '../components/pages/carla/Carla';
 const router = createHashRouter([ // 👈 también aquí 
   {
     path: "/",
@@ -39,6 +40,11 @@ const router = createHashRouter([ // 👈 también aquí
          {
           path: "/martha",
           element: <Martha/>,
+        },
+        
+         {
+          path: "/carla",
+          element: <Carla/>,
         },
         
       ],
