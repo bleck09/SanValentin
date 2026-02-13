@@ -208,6 +208,14 @@ function Anahy() {
                                 animate={{ opacity: 1, scale: 1 }}
                                 transition={{ delay: 0.7 }}
                             />
+                            <motion.h2
+                                initial={{ opacity: 0, y: -20 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                transition={{ delay: 0.4 }}
+                                className="anahy-final-title"
+                            >
+                                De mí, para ti, Anahy.
+                            </motion.h2>
 
                             <motion.p
                                 className="anahy-final-text"
@@ -221,6 +229,7 @@ function Anahy() {
                                 Y porque desde que llegaste a mi vida,
                                 mi corazón entendió que estaba hecho para latir contigo.
                             </motion.p>
+                            
                         </motion.div>
                     )}
                 </AnimatePresence>
