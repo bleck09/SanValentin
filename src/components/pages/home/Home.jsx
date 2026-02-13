@@ -7,7 +7,7 @@ import "./Home.css";
 /* 🔐 PERSONAS SECRETAS */
 const personas = {
   ana: {
-    alias: ["Blady", "vlady", "bladi", "bleck", "vladi", "vladimir", "bladimir"],
+    alias: ["Blady", "vlady", "bladi", "bleck", "vladi", "vladimir", "bladimir","Vlady"],
     comida: "pescado",
     color: "negro",
     codigoSecreto: "EBILX", // 5 letras
@@ -19,7 +19,7 @@ const personas = {
       "La última letra de mi nombre"
     ],
     ruta: "/sofia",
-    nombreMostrar: "Anita"
+    nombreMostrar: "Sofia"
   },
   maria: {
     alias: ["maria", "mary", "mari"],
