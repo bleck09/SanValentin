@@ -1,8 +1,8 @@
 import React, { useState, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import "./Dayana.css";
+import "./Bleck.css";
 
-function Dayana() {
+function Bleck() {
     const totalIntentos = 10;
 
     const imagenes = [
@@ -161,7 +161,7 @@ function Dayana() {
                             exit={{ opacity: 0 }}
                         >
                             <h1 className="anahy-title">
-                                Hola, Dayana<br />
+                                Hola, Nashly<br />
                                 ¿Quieres ser mi San Valentín?
                             </h1>
 
@@ -242,11 +242,11 @@ function Dayana() {
                                 transition={{ delay: 0.4 }}
                                 className="anahy-final-title"
                             >
-                                ¡Sabía que tu corazón diría que sí!
+                                ¡Sabía que dirías que sí!
                             </motion.h2>
 
                             <motion.img
-                                src="/SanValentin/imagenes/Dayana.jpeg"
+                                src="/SanValentin/imagenes/SanValentin3.jpg"
                                 alt="Anahy"
                                 className="anahy-image-final"
                                 initial={{ opacity: 0, scale: 0.8 }}
@@ -259,7 +259,7 @@ function Dayana() {
                                 transition={{ delay: 0.4 }}
                                 className="anahy-final-title"
                             >
-                                De Rodrigo, para Dayana
+                                De mí, para ti, Nashly.
                             </motion.h2>
 
                             <motion.p
@@ -268,11 +268,7 @@ function Dayana() {
                                 animate={{ opacity: 1, y: 0 }}
                                 transition={{ delay: 1 }}
                             >
-                                Porque tu sonrisa es mi lugar favorito.
-                                Porque tu voz es la melodía que calma mi mundo.
-                                Porque tu existencia hace que todo tenga sentido.
-                                Y porque desde que llegaste a mi vida,
-                                mi corazón entendió que estaba hecho para latir contigo.
+                                Sabía que terminarías aquí… el amor siempre encuentra el camino (aunque yo lo haya guiado un poquito 🤣😂).
                             </motion.p>
 
                         </motion.div>
@@ -283,4 +279,4 @@ function Dayana() {
     );
 }
 
-export default Dayana;
+export default Bleck;
