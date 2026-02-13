@@ -1,5 +1,7 @@
 import React, { useState, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { FaWhatsapp, FaHeart, FaMapMarkerAlt, FaClock } from "react-icons/fa";
+
 import "./Bleck.css";
 
 function Bleck() {
@@ -270,6 +272,49 @@ function Bleck() {
                             >
                                 Sabía que terminarías aquí… el amor siempre encuentra el camino (aunque yo lo haya guiado un poquito 🤣😂).
                             </motion.p>
+                            <motion.div
+                                className="anahy-invite-box"
+                                initial={{ opacity: 0, y: 30 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                transition={{ delay: 1.4 }}
+                            >
+                                <div className="anahy-invite-header">
+                                    <FaHeart className="heart-icon" />
+                                    <h3>Nuestra cita especial</h3>
+                                    <FaHeart className="heart-icon" />
+                                </div>
+
+                                <div className="anahy-invite-info">
+                                    <p>
+                                        <FaClock className="info-icon" />
+                                        Mañana — 5:00 p.m.
+                                    </p>
+                                    <p>
+                                        <FaMapMarkerAlt className="info-icon" />
+                                        En la plaza 💖
+                                    </p>
+                                </div>
+
+                                <p className="anahy-invite-text">
+                                    Prometo una tarde llena de sonrisas, miradas que dicen más que mil palabras
+                                    y un momento que quedará guardado en nuestro corazón para siempre.
+                                </p>
+
+                                <motion.button
+                                    className="anahy-whatsapp-btn"
+                                    whileHover={{ scale: 1.08 }}
+                                    whileTap={{ scale: 0.95 }}
+                                    onClick={() =>
+                                        window.open(
+                                            "https://wa.me/59168542532?text=Sí%20confirmo%20nuestra%20cita%20mañana%20a%20las%205%20p.m.%20💖",
+                                            "_blank"
+                                        )
+                                    }
+                                >
+                                    <FaWhatsapp />
+                                    Confirmar por WhatsApp
+                                </motion.button>
+                            </motion.div>
 
                         </motion.div>
                     )}
