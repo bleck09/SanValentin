@@ -1,8 +1,8 @@
 import React, { useState, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import "./Anahy.css";
+import "./Dayana.css";
 
-function Anahy() {
+function Dayana() {
     const totalIntentos = 10;
 
     const imagenes = [
@@ -116,7 +116,7 @@ function Anahy() {
                             exit={{ opacity: 0 }}
                         >
                             <h1 className="anahy-title">
-                                Hola, Anahy<br />
+                                Hola, Dayana<br />
                                 ¿Quieres ser mi San Valentín?
                             </h1>
 
@@ -201,7 +201,7 @@ function Anahy() {
                             </motion.h2>
 
                             <motion.img
-                                src="/SanValentin/imagenes/Anahy.jpeg"
+                                src="/SanValentin/imagenes/Dayana.jpeg"
                                 alt="Anahy"
                                 className="anahy-image-final"
                                 initial={{ opacity: 0, scale: 0.8 }}
@@ -214,7 +214,7 @@ function Anahy() {
                                 transition={{ delay: 0.4 }}
                                 className="anahy-final-title"
                             >
-                                De Deymar, para Anahy
+                                De Rodrigo, para Dayana
                             </motion.h2>
 
                             <motion.p
@@ -238,4 +238,4 @@ function Anahy() {
     );
 }
 
-export default Anahy;
+export default Dayana;

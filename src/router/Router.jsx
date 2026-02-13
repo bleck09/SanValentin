@@ -11,6 +11,7 @@ import Login from '../components/pages/login/Login';
 import Martha from '../components/pages/martha/Martha';
 import Carla from '../components/pages/carla/Carla';
 import Anahy from '../components/pages/anahy/Anahy';
+import Dayana from '../components/pages/danaya/Dayana';
 
 const router = createHashRouter([ // 👈 también aquí 
   {
@@ -51,6 +52,10 @@ const router = createHashRouter([ // 👈 también aquí
          {
           path: "/anahy",
           element: <Anahy/>,
+        },
+         {
+          path: "/dayana",
+          element: <Dayana/>,
         },
         
         
