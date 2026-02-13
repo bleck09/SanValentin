@@ -33,6 +33,12 @@
   color: #ffb6c1;
   margin-top: 60px;
 }
+.martha1-titulo {
+  font-size: 3rem;
+  font-family: 'Beau Rivage', cursive;
+  color: #ffb6c1;
+  margin-top: 6px;
+}
 
 /* Mensaje */
 .martha-mensaje {
@@ -73,6 +79,10 @@
 .martha-album {
   margin-top: 40px;
 }
+.martha2-album {
+  margin-top: 4px;
+}
+
 
 .martha-subtitulo {
   font-size: 1.8rem;

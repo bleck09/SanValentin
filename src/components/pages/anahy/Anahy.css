@@ -121,12 +121,8 @@
 /* ====== TEXT ====== */
 .anahy-text {
   
-  margin-top: 12px;
-  
-  min-height: 40px;
-
-font-family: "Beau Rivage", cursive;
-  font-size: clamp(1rem, 5vw, 2rem);
+   font-family: "Beau Rivage", cursive;
+  font-size: clamp(2rem, 5vw, 3rem);
   color: #c2185b;
   margin-bottom: 15px;
   line-height: 1.2;

@@ -64,9 +64,11 @@ function Martha() {
                 transition={{ duration: 1.5 }}
                 className="martha-titulo"
             >
-                Para ti, Martha ❤️
+                Para ti, Martha <br />
+                ❤️ La mujer más hermosa ❤️
             </motion.h1>
-
+            {/* GALERÍA SOLO DE ELLA */}
+            <h1 className="martha1-titulo"> </h1>
             <motion.p
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
@@ -74,8 +76,32 @@ function Martha() {
                 className="martha-mensaje"
             >
                 Hay personas que llegan a tu vida…
-                y se convierten en destino ✨
+                y se convierten en destino 
+                
             </motion.p>
+             <motion.p
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 1 }}
+                className="martha-mensaje"
+            >
+                
+                Cada foto tuya es una obra de arte.
+            </motion.p>
+
+            <div className="martha-galeria">
+                <div className="martha-grid">
+                    {fotosElla.map((foto, index) => (
+                        <div
+                            key={index}
+                            className="martha-card"
+                            onClick={() => setFotoSeleccionada(foto)}
+                        >
+                            <img src={foto} alt={`Martha ${index + 1}`} />
+                        </div>
+                    ))}
+                </div>
+            </div>
 
             {/* Carta */}
             <div className="martha-carta-wrapper">
@@ -98,11 +124,9 @@ function Martha() {
                             className="martha-carta"
                         >
                             <p>
-                                Martha…
-                                admiro tu fuerza, tu dulzura y la forma en que haces
-                                que todo tenga sentido.
-                                No eres casualidad en mi vida,
-                                eres una decisión que volvería a tomar mil veces 💛
+                                Desde que llegaste a mi vida todo es más bonito.
+                                Gracias por cada sonrisa, cada momento y cada recuerdo.
+                                Eres mi persona favorita en este mundo. 💕✨
                             </p>
                         </motion.div>
                     )}
@@ -110,17 +134,19 @@ function Martha() {
             </div>
 
             {/* Álbum pequeño */}
-            <div className="martha-album">
-                <h2 className="martha-subtitulo">Nuestros Momentos ✨</h2>
+            <div className="martha2-album">
+                <motion.h1
+                    initial={{ opacity: 0, y: -60 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 1.5 }}
+                    className="martha1-titulo"
+                >
+                    Nuestros Momentos ✨
+                </motion.h1>
+                <h2 className="martha-subtitulo"></h2>
 
                 <div className="martha-polaroid-container">
-                    <div className="martha-polaroid">
-                        <img src="/SanValentin/imagenes/Marthallamdas.jpeg" alt="Llamadas nocturnas" />
-                        <p>
-                            Nuestras llamadas cada noche 🌙
-                            donde el tiempo se detiene y tu voz se convierte en mi lugar favorito.
-                        </p>
-                    </div>
+
 
                     <div className="martha-polaroid">
                         <img src="/SanValentin/imagenes/MatharVR.jpeg" alt="Juegos VR" />
@@ -129,29 +155,19 @@ function Martha() {
                             risas, emoción y mirarte feliz… uno de mis recuerdos más especiales contigo.
                         </p>
                     </div>
+                    <div className="martha-polaroid">
+                        <img src="/SanValentin/imagenes/Marthallamdas.jpeg" alt="Llamadas nocturnas" />
+                        
+                        <p>
+                            Nuestras llamadas cada noche 🌙
+                            donde el tiempo se detiene y tu voz se convierte en mi lugar favorito.
+                        </p>
+                    </div>
                 </div>
             </div>
 
 
-            {/* GALERÍA SOLO DE ELLA */}
-            <h1 className="martha-titulo">La mujer más hermosa ❤️</h1>
-            <p className="martha-mensaje">
-                Cada foto tuya es una obra de arte que ilumina mi mundo. ✨
-            </p>
-
-            <div className="martha-galeria">
-                <div className="martha-grid">
-                    {fotosElla.map((foto, index) => (
-                        <div
-                            key={index}
-                            className="martha-card"
-                            onClick={() => setFotoSeleccionada(foto)}
-                        >
-                            <img src={foto} alt={`Martha ${index + 1}`} />
-                        </div>
-                    ))}
-                </div>
-            </div>
+            
 
             {/* Lightbox */}
             <AnimatePresence>
