@@ -312,7 +312,7 @@ function Martita() {
                                     }
                                 >
                                     <FaWhatsapp />
-                                    Confirmar por WhatsApp
+                                    Aceptar
                                 </motion.button>
                             </motion.div>
 

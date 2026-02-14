@@ -7,7 +7,7 @@ import "./Home.css";
 /* 🔐 PERSONAS SECRETAS */
 const personas = {
   ana: {
-    alias: ["Blady", "vlady", "bladi", "bleck", "vladi", "vladimir", "bladimir", "Vlady"],
+    alias: ["Blady", "blady", "vlady", "bladi", "vladi", "vladimir", "bladimir", "Vlady"],
     comida: "pescado",
     color: "negro",
     codigoSecreto: "EBILX", // 5 letras
@@ -21,18 +21,33 @@ const personas = {
     ruta: "/sofia",
     nombreMostrar: "Sofia"
   },
+  carla: {
+    alias: ["Carla", "carlita", "carla"],
+    comida: "pescado",
+    color: "negro",
+    codigoSecreto: "8MILA", // 5 letras
+    pistas: [
+      "Son dos Aries",
+      "Pelicula de Depredador tierras salvajes",
+      "El lugar se llama Stitch",
+      "Empieza con L",
+      "Es un fuego, Ardiente "
+    ],
+    ruta: "/carla",
+    nombreMostrar: "Carla"
+  },
   maria: {
-    alias: ["maria", "mary", "mari"],
+    alias: ["bleck", "Bleck"],
     comida: "pique",
     color: "negro",
-    codigoSecreto: "123456", // 6 letras
+    codigoSecreto: "AGMTRA", // 6 letras
     pistas: [
-      "Inicial de tu comida favorita",
-      "Última letra de tu apellido",
-      "Inicial de nuestro lugar favorito",
-      "Primera letra de mi apodo",
-      "Número que siempre repetimos",
-      "La inicial de algo que amas"
+      "Es del color del cielo en un día despejado",          // Azul → A12345
+      "Animal que dice 'miau'",                              // Gato →  A G 3456
+      "Fruta roja que también puede ser verde",              // Manzana → A G M 456
+      "El planeta donde vivimos",                            // Tierra → A G M T 56
+      "Lo que usamos para ver la hora",                      // Reloj → A G M T R 6
+      "Sentimiento que mueve el mundo"                       // Amor → A G M T R A
     ],
     ruta: "/maria",
     nombreMostrar: "María"
@@ -41,7 +56,7 @@ const personas = {
     alias: ["martha", "Martha", "Martita"],
     comida: "pique",
     color: "negro",
-    codigoSecreto: "MGRkV", // 6 letras
+    codigoSecreto: "MGRkV", 
     pistas: [
       "Nombre de una película que navegó por los océanos", // Moana → M
       "Personaje travieso de un juego que empieza con G",  // Groo Game → G
