@@ -7,7 +7,7 @@ import "./Home.css";
 /* 🔐 PERSONAS SECRETAS */
 const personas = {
   ana: {
-    alias: ["Blady", "vlady", "bladi", "bleck", "vladi", "vladimir", "bladimir","Vlady"],
+    alias: ["Blady", "vlady", "bladi", "bleck", "vladi", "vladimir", "bladimir", "Vlady"],
     comida: "pescado",
     color: "negro",
     codigoSecreto: "EBILX", // 5 letras
@@ -36,6 +36,21 @@ const personas = {
     ],
     ruta: "/maria",
     nombreMostrar: "María"
+  },
+  martha: {
+    alias: ["martha", "Martha", "Martita"],
+    comida: "pique",
+    color: "negro",
+    codigoSecreto: "MGRkV", // 6 letras
+    pistas: [
+      "Nombre de una película que navegó por los océanos", // Moana → M
+      "Personaje travieso de un juego que empieza con G",  // Groo Game → G
+      "Mismo personaje de antes, pero con la letra que sigue en su código secreto", // R
+      "Canción romántica en español, comienza con la letra que dice bésame", // K
+      "Número que escribimos en números romanos y siempre usamos juntos"
+    ],
+    ruta: "/martha",
+    nombreMostrar: "Martha"
   }
 };
 

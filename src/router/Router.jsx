@@ -13,6 +13,7 @@ import Carla from '../components/pages/carla/Carla';
 import Anahy from '../components/pages/anahy/Anahy';
 import Dayana from '../components/pages/danaya/Dayana';
 import Bleck from '../components/pages/bleck/bleck';
+import Martita from '../components/pages/martita/Martita';
 
 const router = createHashRouter([ // 👈 también aquí 
   {
@@ -61,6 +62,10 @@ const router = createHashRouter([ // 👈 también aquí
         {
           path: "/bleck",
           element: <Bleck/>,
+        },
+        {
+          path: "/martita",
+          element: <Martita/>,
         },
         
         
