@@ -25,7 +25,7 @@ const personas = {
     alias: ["Carla", "carlita", "carla"],
     comida: "pescado",
     color: "negro",
-    codigoSecreto: "8MILA", // 5 letras
+    codigoSecreto: "8MILS", // 5 letras
     pistas: [
       "Son dos Aries",
       "Pelicula de Depredador tierras salvajes",
